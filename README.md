@@ -6,8 +6,8 @@ ____________________________________________________
 
 Description: This is a console-based implementation of the classic Tic Tac Toe game in C++. The game allows a player to compete against the computer in a turn-based manner. The player marks cells on a 3x3 grid, aiming to create a line of three marks horizontally, vertically, or diagonally before the computer does.
 
-                                          Features:
-                                         -----------
+Features:
+__________
 1.Player vs Computer gameplay: Engage in a challenging battle against the computer opponent, which utilizes a set of possibilities to make intelligent moves.
 Interactive Command-Line Interface: The game provides a user-friendly command-line interface for inputting moves and displaying the current state of the board.
 
