@@ -1,5 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
+#include <stdlib.h>
+#include <time.h>
+
 
 using namespace std;
 
@@ -173,7 +176,8 @@ int player_turn()
 
 //Function for the computer to make it's move.
 int computer_turn()
-{  vector<vector<int>> vec1(3,vector<int>(3));
+{  srand(time(0));
+    vector<vector<int>> vec1(3,vector<int>(3));
     for(int i=0;i<3;i++)
     {
         for(int j=0;j<3;j++)
@@ -228,9 +232,9 @@ int computer_turn()
         }
     }
 
-
-    int i=vec3[0].first;
-    int j=vec3[0].second;
+     int k=rand()%vec3.size();
+    int i=vec3[k].first;
+    int j=vec3[k].second;
     cout << "system chose : "<<i*3+j+1 << "\n";
      insert_char(i,j,'O');
      return 0;
@@ -252,7 +256,7 @@ int main()
         if(turn==1) {
                 int temp=computer_turn();print_board();
         if(temp>=1e5){
-            cout<<"System won.";
+            cout<<"System won.\n\n";
             return 0;
         }
         }
@@ -265,12 +269,12 @@ int main()
 
         print_board();
         if(temp==1){
-            cout<<"You won!.\n";
+            cout<<"You won!.\n\n";
             return 0;
         }}
         turn=1-turn;
 
     }
-    cout << "Oops! It's a tie.\n" ;
+    cout << "Oops! It's a tie.\n\n" ;
     return 0;
 }
